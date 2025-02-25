@@ -1,0 +1,123 @@
+/* src/styles.css */
+.dashboard {
+  min-height: 100vh;
+  background-color: #F8F9FA; /* Light background */
+  
+}
+
+.navbar {
+  background-color: #007BFF; /* Primary color */
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark text for readability */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #F8F9FA; /* Light background */
+  margin-bottom: 2rem; /* Space between cards */
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(24, 5, 199, 0.2); /* Deeper shadow on hover */
+  transition: box-shadow 0.25s, /* Smooth transition */
+              transform 0.25s, /* Smooth transition */
+              background-color 0.25s, /* Smooth transition */
+              color 0.25s, /* Smooth transition */
+              border-color 0.25s, /* Smooth transition */
+              border-radius 0.25s; /* Smooth transition */
+              transition: border-color 0.25s, /* Smooth transition */
+              border-radius 0.25s; /* Smooth transition */
+
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #007BFF; /* Primary color for card titles */
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333; /* Dark text for readability */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.links {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background-color: #F8F9FA; /* Light background */
+  border-top: 1px solid #ddd; /* Divider line */
+  border-bottom: 1px solid #ddd; /* Divider line */
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  color: #007BFF; /* Primary color for links */
+  display: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+}
+.links a {
+  color: #007BFF; /* Primary color for links */
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #0069D9; /* Darker primary color for links on hover */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.pagination button {
+  background-color: #007BFF; /* Primary color for buttons */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.footer {
+  background-color: #007BFF; /* Primary color for footer */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  
+} 
