@@ -121,3 +121,78 @@ body {
   position: fixed;
   
 } 
+
+/* Todo list styling */
+  
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.todo-list {
+  background-color: #F8F9FA; /* Light background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: box-shadow 0.25s, /* Smooth transition */
+              transform 0.25s, /* Smooth transition */
+              background-color 0.25s, /* Smooth transition */
+              color 0.25s, /* Smooth transition */
+              border-color 0.25s, /* Smooth transition */
+              border-radius 0.25s; /* Smooth transition */
+              transition: border-color 0.25s, /* Smooth transition */
+              border-radius 0.25s; /* Smooth transition */
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  .todo-list {
+    width: 100%;
+  }
+  .navbar {
+    font-size: 1.25rem;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+ 
+  .links {
+    flex-direction: column;
+  }
+  .pagination {
+    flex-direction: column;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .cards-container {
+    padding: 1rem;
+  }
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .pagination {
+    flex-direction: column;
+  }
+  .footer {
+    position: static;
+  }
+}
+}
