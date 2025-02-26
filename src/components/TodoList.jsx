@@ -96,7 +96,7 @@ function TodoList() {
 
   const taskStyle = {
     flex: '1',
-    color: '#ffffff' // White text on dark container
+    color: '#111111' // White text on dark container
   };
 
   const completedTaskStyle = {
