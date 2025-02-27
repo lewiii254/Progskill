@@ -1,0 +1,102 @@
+/* Pomodoro.css */
+.pomodoro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .phase {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .phase.work {
+    color: #e74c3c; /* Red for work */
+  }
+  
+  .phase.break {
+    color: #2ecc71; /* Green for break */
+  }
+  
+  .timer {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #34495e;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+  }
+  
+  .timer:hover {
+    transform: scale(1.05);
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .start-btn {
+    background: #2ecc71; /* Green */
+  }
+  
+  .start-btn:hover:not(:disabled) {
+    background: #27ae60;
+    transform: translateY(-2px);
+  }
+  
+  .pause-btn {
+    background: #f39c12; /* Orange */
+  }
+  
+  .pause-btn:hover:not(:disabled) {
+    background: #e67e22;
+    transform: translateY(-2px);
+  }
+  
+  .reset-btn {
+    background: #3498db; /* Blue */
+  }
+  
+  .reset-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Add a subtle animation for active buttons */
+  .btn:active:not(:disabled) {
+    transform: translateY(1px);
+  }

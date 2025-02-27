@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import './Pomodoro.css'; // Assuming you'll add this CSS file
 
 const Pomodoro = () => {
-  const [timeLeft, setTimeLeft] = useState(1500); // 25 minutes in seconds
-  const [isRunning, setIsRunning] = useState(false); // Timer running status
-  const [phase, setPhase] = useState('work'); // 'work' or 'break'
+  const [timeLeft, setTimeLeft] = useState(1500);
+  const [isRunning, setIsRunning] = useState(false);
+  const [phase, setPhase] = useState('work');
 
   useEffect(() => {
-    console.log('useEffect triggered:', { isRunning, timeLeft, phase }); // Debug log
     let timer;
     if (isRunning && timeLeft > 0) {
       timer = setTimeout(() => {
-        console.log('Timer ticking:', timeLeft - 1); // Debug timer
         setTimeLeft(timeLeft - 1);
       }, 1000);
     } else if (isRunning && timeLeft === 0) {
-      console.log('Switching phase from', phase); // Debug phase switch
       if (phase === 'work') {
         setPhase('break');
-        setTimeLeft(300); // 5-minute break
+        setTimeLeft(300);
       } else {
         setPhase('work');
-        setTimeLeft(1500); // Back to 25-minute work
+        setTimeLeft(1500);
       }
     }
-    return () => {
-      if (timer) clearTimeout(timer); // Cleanup
-    };
+    return () => clearTimeout(timer);
   }, [isRunning, timeLeft, phase]);
 
   const formatTime = (seconds) => {
@@ -34,48 +30,37 @@ const Pomodoro = () => {
     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const handleStart = () => {
-    console.log('Start clicked'); // Debug button
-    setIsRunning(true);
-  };
-
-  const handlePause = () => {
-    console.log('Pause clicked'); // Debug button
-    setIsRunning(false);
-  };
-
+  const handleStart = () => setIsRunning(true);
+  const handlePause = () => setIsRunning(false);
   const handleReset = () => {
-    console.log('Reset clicked'); // Debug button
     setIsRunning(false);
     setPhase('work');
     setTimeLeft(1500);
   };
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Pomodoro Timer</h1>
-      <h2>{phase === 'work' ? 'Work Session' : 'Break Time'}</h2>
-      <div style={{ fontSize: '48px', margin: '20px' }}>
-        {formatTime(timeLeft)}
-      </div>
-      <div>
+    <div className="pomodoro-container">
+      <h1 className="title">Pomodoro Timer</h1>
+      <h2 className={`phase ${phase}`}>{phase === 'work' ? 'Work Session' : 'Break Time'}</h2>
+      <div className="timer">{formatTime(timeLeft)}</div>
+      <div className="button-group">
         <button
           onClick={handleStart}
           disabled={isRunning}
-          style={{ margin: '0 10px', padding: '10px 20px' }}
+          className="btn start-btn"
         >
           Start
         </button>
         <button
           onClick={handlePause}
           disabled={!isRunning}
-          style={{ margin: '0 10px', padding: '10px 20px' }}
+          className="btn pause-btn"
         >
           Pause
         </button>
         <button
           onClick={handleReset}
-          style={{ margin: '0 10px', padding: '10px 20px' }}
+          className="btn reset-btn"
         >
           Reset
         </button>

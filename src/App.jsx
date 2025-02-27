@@ -4,7 +4,7 @@ import Card from './components/Card';
 import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import Pomodoro from './components/Pomodoro';
-
+import './App.css';
 function App() {
   return (
     <div className="dashboard">
