@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import Pomodoro from './components/Pomodoro';
 import './App.css';
+import Weather from './components/weather';
+
 function App() {
   return (
     <div className="dashboard">
@@ -19,6 +21,7 @@ function App() {
       </div>
      <div>
       <Pomodoro />
+      <Weather />
      </div>
       <div className="footer"><Footer /></div>
     </div>
