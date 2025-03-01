@@ -6,15 +6,16 @@ import TodoList from './components/TodoList';
 import Pomodoro from './components/Pomodoro';
 import './App.css';
 import Weather from './components/weather';
+import Quote from './components/Quote'; // Import the Quote component
 
 function App() {
   return (
     <div className="dashboard">
       <Navbar />
       <div className="cards-container">
-        <Card title="Card 1" content="This is the first card." />
-        <Card title="Card 2" content="This is the second card." />
-        <Card title="Card 3" content="This is the third card." />
+        <Card title="Card 1" content="Daily Progress" />
+        <Card title="Card 2" content="Upcoming Tasks" />
+        <Card title="Card 3" content="Weather Snapshot" />
       </div>
       <div className="todo-container">
         <TodoList />
@@ -22,6 +23,7 @@ function App() {
      <div>
       <Pomodoro />
       <Weather />
+      <Quote /> {/* Capitalized component name to follow convention */}
      </div>
       <div className="footer"><Footer /></div>
     </div>

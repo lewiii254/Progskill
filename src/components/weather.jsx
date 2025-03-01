@@ -36,7 +36,7 @@ const Weather = () => {
 
   return (
     <div className={styles.weatherContainer}>
-        <h1 className={styles.weatherTitle}>Weather web app</h1>
+        <h1 className={styles.weatherTitle}>🌤Weather web app🌦</h1>
       <form onSubmit={fetchWeather} className={styles.weatherForm}>
         <input
           type="text"
