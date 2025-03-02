@@ -1,7 +1,7 @@
 /* src/styles.css */
 .dashboard {
   min-height: 100vh;
-  background-color: #F8F9FA; /* Light background */
+  
   
 }
 
@@ -26,7 +26,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
-  background-color: #F8F9FA; /* Light background */
   margin-bottom: 2rem; /* Space between cards */
 }
 
@@ -128,6 +127,22 @@ body {
   display: flex;
 } 
 
+/* styles.css */
+.light {
+  --background: #ffffff;
+  --text: #000000;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
