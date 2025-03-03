@@ -144,6 +144,7 @@ body {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
+
 /* Responsive design */
 @media (max-width: 768px) {
   .card {

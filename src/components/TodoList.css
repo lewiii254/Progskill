@@ -1,0 +1,36 @@
+/* App.css */
+.streak-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+  }
+  
+  .streak-display p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .streak-visual {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  
+  .streak-visual span {
+    margin: 0 2px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .inactive {
+    opacity: 0.3;
+  }
+  
+  .points {
+    margin-top: 15px;
+    color: #10b981;
+    font-weight: bold;
+  }

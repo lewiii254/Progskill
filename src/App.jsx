@@ -10,6 +10,7 @@ import Quote from './components/Quote'; // Import the Quote component
 import { ThemeProvider } from './ThemeContext';
 import ThemeToggle from './ThemeToggle';
 
+
 function App() {
   return (
     <div className="dashboard">
@@ -29,7 +30,7 @@ function App() {
       <div className="todo-container">
         <TodoList />
       </div>
-     <div>
+      <div>
       <Pomodoro />
       <Weather />
       <Quote /> {/* Capitalized component name to follow convention */}
