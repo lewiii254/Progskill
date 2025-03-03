@@ -178,7 +178,7 @@ function TodoListWithStreak() {
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>Todo List with Streak</h1>
+      <h1 style={headingStyle}>✨Todo List with Streak</h1>
       
       {/* Todo List Section */}
       <div style={inputContainerStyle}>
@@ -189,7 +189,7 @@ function TodoListWithStreak() {
           onChange={(e) => setNewTask(e.target.value)}
           placeholder="Add a new task"
         />
-        <button style={addButtonStyle} onClick={addTask}>Add Task</button>
+        <button style={addButtonStyle} onClick={addTask}>Add Task🧾</button>
       </div>
       <ul style={listStyle}>
         {tasks.map((task, index) => (
