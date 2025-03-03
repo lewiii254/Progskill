@@ -178,7 +178,7 @@ function TodoListWithStreak() {
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>✨Todo List with Streak</h1>
+      <h1 style={headingStyle}>✨Todo List with Streak🚀</h1>
       
       {/* Todo List Section */}
       <div style={inputContainerStyle}>
