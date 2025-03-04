@@ -1,4 +1,5 @@
 // src/App.jsx
+import React, { useState, useEffect } from "react";
 import Navbar from './components/Navbar';
 import Card from './components/Card';
 import Footer from './components/Footer';
@@ -9,12 +10,22 @@ import Weather from './components/weather';
 import Quote from './components/Quote'; // Import the Quote component
 import { ThemeProvider } from './ThemeContext';
 import ThemeToggle from './ThemeToggle';
+import { auth } from "./firebase"; // Adjust path if needed
 
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe(); // Cleanup on unmount
+  }, []);
+  
   return (
     <div className="dashboard">
-      <Navbar />
+      <Navbar user={user} setUser={setUser} />
       <div className="cards-container">
         <Card title="Card 1" content="Daily Progress" />
         <Card title="Card 2" content="Upcoming Tasks" />
